@@ -1,4 +1,5 @@
 import 'package:coffee_shop_challenge/constants/constatns.dart';
+import 'package:coffee_shop_challenge/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
       theme: AppThemes.lightTheme,
-      home: const SizedBox(),
+      routerConfig: AppRoutes.routerConfig,
     );
   }
 }

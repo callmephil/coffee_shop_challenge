@@ -8,7 +8,7 @@ import 'package:go_router/go_router.dart';
 class AppRoutes {
   const AppRoutes._();
 
-  static GoRouter get routes {
+  static GoRouter get routerConfig {
     return GoRouter(
       initialExtra: '/',
       routes: [
