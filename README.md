@@ -1,4 +1,4 @@
-# coffe_shop_challenge
+# coffee_shop_challenge
 
 A new Flutter project.
 
