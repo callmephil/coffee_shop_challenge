@@ -1,4 +1,4 @@
-import 'package:coffee_shop_challenge/constants/constatns.dart';
+import 'package:coffee_shop_challenge/constants/constants.dart';
 import 'package:coffee_shop_challenge/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Demo',
+      title: 'Caffeine',
       theme: AppThemes.lightTheme,
+      // TODO: maybe dark theme
+      darkTheme: AppThemes.lightTheme,
       routerConfig: AppRoutes.routerConfig,
     );
   }
