@@ -30,7 +30,7 @@ class AppRoutes {
         ),
 
         // Custom Screens
-        // favorties
+        // favorites
         GoRoute(
           path: '/favorites',
           builder: (context, state) => const FavoritesScreen(),
