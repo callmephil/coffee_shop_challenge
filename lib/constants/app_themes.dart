@@ -7,8 +7,22 @@ class AppThemes {
   const AppThemes._();
 
   static final ThemeData lightTheme = ThemeData(
+    useMaterial3: true,
     colorSchemeSeed: AppColors.orange,
     visualDensity: VisualDensity.adaptivePlatformDensity,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: AppColors.orange,
+      unselectedItemColor: AppColors.lightGrey,
+      selectedLabelStyle: AppTextStyles.labelSmall.copyWith(
+        color: AppColors.orange,
+      ),
+      unselectedLabelStyle: AppTextStyles.labelSmall.copyWith(
+        color: AppColors.lightGrey,
+      ),
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      type: BottomNavigationBarType.fixed,
+    ),
     textTheme: const TextTheme(
       displayLarge: AppTextStyles.displayLarge,
       displayMedium: AppTextStyles.displayMedium,

@@ -10,7 +10,7 @@ class AppRoutes {
 
   static GoRouter get routerConfig {
     return GoRouter(
-      initialExtra: '/',
+      initialLocation: '/',
       routes: [
         GoRoute(
           path: '/',

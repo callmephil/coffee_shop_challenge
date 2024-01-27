@@ -13,6 +13,15 @@ void main() {
 
   LocaleSettings.useDeviceLocale();
 
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    final context = WidgetsBinding.instance.rootElement;
+    if (context == null) {
+      return;
+    }
+
+    AppAssets.preCacheAssets(context);
+  });
+
   runApp(TranslationProvider(child: const MyApp()));
 }
 
@@ -27,8 +36,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-
-    AppAssets.preCacheAssets(context);
   }
 
   @override
