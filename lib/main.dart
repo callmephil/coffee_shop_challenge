@@ -1,6 +1,8 @@
 import 'package:coffee_shop_challenge/constants/constants.dart';
+import 'package:coffee_shop_challenge/i18n/strings.g.dart';
 import 'package:coffee_shop_challenge/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
@@ -9,7 +11,9 @@ void main() {
   /// removes the # from the url
   setPathUrlStrategy();
 
-  runApp(const MyApp());
+  LocaleSettings.useDeviceLocale();
+
+  runApp(TranslationProvider(child: const MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -32,6 +36,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp.router(
       title: 'Caffeine',
       theme: AppThemes.lightTheme,
+      locale: TranslationProvider.of(context).flutterLocale, // use provider
+      supportedLocales: AppLocaleUtils.supportedLocales,
+      localizationsDelegates: GlobalMaterialLocalizations.delegates,
       // TODO: maybe dark theme
       darkTheme: AppThemes.lightTheme,
       routerConfig: AppRoutes.routerConfig,
