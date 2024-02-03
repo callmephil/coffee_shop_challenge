@@ -8,9 +8,19 @@ class AppThemes {
 
   static final ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    colorSchemeSeed: AppColors.orange,
+    scaffoldBackgroundColor: AppColors.backgroundLight2,
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.backgroundLight2,
+      foregroundColor: AppColors.black,
+      titleTextStyle: AppTextStyles.headlineSmall.copyWith(
+        color: AppColors.black,
+      ),
+      elevation: 0,
+    ),
+    colorSchemeSeed: AppColors.backgroundLight2,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: AppColors.backgroundLight2,
       selectedItemColor: AppColors.orange,
       unselectedItemColor: AppColors.lightGrey,
       selectedLabelStyle: AppTextStyles.labelSmall.copyWith(

@@ -1,6 +1,4 @@
-import 'package:coffee_shop_challenge/constants/app_assets.dart';
-import 'package:coffee_shop_challenge/constants/app_colors.dart';
-import 'package:coffee_shop_challenge/constants/app_sizes.dart';
+import 'package:coffee_shop_challenge/constants/constants.dart';
 import 'package:coffee_shop_challenge/extensions/string_extensions.dart';
 import 'package:coffee_shop_challenge/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -69,22 +67,21 @@ class _SplashScreenState extends State<SplashScreen>
           child: SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(AppSizes.s32),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: Text(
-                  'Coffee Shop Challenge'.tr,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                    color: AppColors.white,
-                    fontWeight: FontWeight.bold,
-                    shadows: [
-                      const Shadow(
-                        color: AppColors.black,
-                        offset: Offset(0, 4),
-                        blurRadius: 4,
-                      ),
-                    ],
+              child: RichText(
+                text: TextSpan(
+                  text: 'Coffee \n'.tr,
+                  style: context.textStyle.displaySmall?.white.copyWith(
+                    letterSpacing: 2,
                   ),
+                  children: [
+                    TextSpan(
+                      text: 'Challenge'.tr,
+                      style: context.textStyle.displaySmall?.white.copyWith(
+                        color: AppColors.orange,
+                        letterSpacing: 2,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

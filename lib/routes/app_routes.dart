@@ -40,26 +40,28 @@ class AppRoutes {
         ),
         GoRoute(
           path: '/details/:id',
+          name: AppRoutesEnum.details.name,
           builder: (context, state) => const DetailsScreen(),
         ),
         GoRoute(
           path: '/order/:id',
+          name: AppRoutesEnum.order.name,
           builder: (context, state) => const DetailsScreen(),
         ),
         GoRoute(
           path: '/delivery',
+          name: AppRoutesEnum.delivery.name,
           builder: (context, state) => const DeliveryScreen(),
         ),
-
-        // Custom Screens
-        // favorites
         GoRoute(
           path: '/favorites',
+          name: AppRoutesEnum.favorites.name,
           builder: (context, state) => const FavoritesScreen(),
         ),
         // profile
         GoRoute(
           path: '/profile',
+          name: AppRoutesEnum.profile.name,
           builder: (context, state) => const ProfileScreen(),
         ),
       ],

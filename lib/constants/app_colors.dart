@@ -16,6 +16,8 @@ class AppColors {
   static const Color white = Color(0xFFFFFFFF);
 
   static const Color backgroundLight = Color(0xFFE4EDFA);
+  static const Color backgroundLight2 = Color(0xFFF9F9F9);
+  static const Color backgroundDark = Color(0xFF313131);
   // Can't figure out what is it gradient?
   // static const Color backgroundDark = Color(0xFF)
 }
