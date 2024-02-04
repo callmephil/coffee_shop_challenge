@@ -11,7 +11,7 @@ enum AppRoutesEnum {
   home('/home'),
   details('/details/:id'),
   order('/order/:id'),
-  delivery('/delivery'),
+  delivery('/delivery/:id'),
   favorites('/favorites'),
   profile('/profile'),
   ;
@@ -39,7 +39,7 @@ class AppRoutes {
           builder: (context, state) => const HomeScreen(),
         ),
         GoRoute(
-          path: '/details/:id',
+          path: AppRoutesEnum.details.path,
           name: AppRoutesEnum.details.name,
           builder: (context, state) => const DetailsScreen(),
         ),

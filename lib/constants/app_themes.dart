@@ -8,6 +8,7 @@ class AppThemes {
 
   static final ThemeData lightTheme = ThemeData(
     useMaterial3: true,
+    colorSchemeSeed: AppColors.orange,
     scaffoldBackgroundColor: AppColors.backgroundLight2,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.backgroundLight2,
@@ -17,7 +18,13 @@ class AppThemes {
       ),
       elevation: 0,
     ),
-    colorSchemeSeed: AppColors.backgroundLight2,
+    bottomAppBarTheme: const BottomAppBarTheme(
+      surfaceTintColor: Colors.transparent,
+      color: AppColors.white,
+    ),
+    dividerTheme: const DividerThemeData(
+      color: AppColors.grey,
+    ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.backgroundLight2,

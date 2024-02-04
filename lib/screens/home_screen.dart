@@ -274,9 +274,9 @@ class _FilterListState extends State<FilterList> {
     return ListView.separated(
       shrinkWrap: true,
       scrollDirection: Axis.horizontal,
-      padding: const EdgeInsets.only(left: 30),
-      separatorBuilder: (_, __) => const SizedBox(width: 4),
-      itemCount: 8,
+      padding: const EdgeInsets.only(left: AppSizes.s30),
+      separatorBuilder: (_, __) => const SizedBox(width: AppSizes.s8),
+      itemCount: widget.filters.length,
       itemBuilder: (_, index) {
         final item = widget.filters[index];
 

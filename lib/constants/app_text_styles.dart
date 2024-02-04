@@ -121,6 +121,7 @@ extension TextFromContextExtension on BuildContext {
 
 extension TextStyleExtension on TextStyle {
   TextStyle get w400 => copyWith(fontWeight: FontWeight.w400);
+  TextStyle get w600 => copyWith(fontWeight: FontWeight.w600);
   TextStyle get w700 => copyWith(fontWeight: FontWeight.w700);
   TextStyle get italic => copyWith(fontStyle: FontStyle.italic);
   TextStyle get underline => copyWith(decoration: TextDecoration.underline);
@@ -128,4 +129,6 @@ extension TextStyleExtension on TextStyle {
   TextStyle get overline => copyWith(decoration: TextDecoration.overline);
   // Colors
   TextStyle get white => copyWith(color: AppColors.white);
+  TextStyle get lightGrey => copyWith(color: AppColors.lightGrey);
+  TextStyle get orange => copyWith(color: AppColors.orange);
 }

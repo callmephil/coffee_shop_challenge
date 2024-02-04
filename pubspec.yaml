@@ -41,6 +41,8 @@ dependencies:
   go_router: ^13.0.1
   json_annotation: ^4.8.1
   url_strategy: ^0.2.0
+  collection: ^1.18.0
+  expandable_text: ^2.3.0
 
 dev_dependencies:
   flutter_test:
